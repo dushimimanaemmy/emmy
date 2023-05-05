@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    user-select: none;
+}
+:root {
+    --width-lg: 88%;
+    --width-md: 84%;
+    --width-sm: 92%;
+  
+    --color-text: black;
+    --color-bg: whitesmoke;
+    --color-btn: green;
+    --color-menu: grey;
+    --color-orange: orange;
+  }
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+body{
+    background-color: var(--color-bg);
+}
+.container{
+    width: var(--width-lg);
+    margin: 0 auto;
+}
+/* =========================== phone ============================= */
+#phone{
+    height: 100vh;
+    margin-top: 5rem;
+}
+.phone{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1.5rem;
+}
+.pimage{
+    height: 60vh;
+    background-color: aqua;
+    overflow: hidden;
+}
+.pimage img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.phonecard{
+    height: 390px;
+    background-color: var(--color-menu);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+    position: relative;
+}
+.pdesc{
+    color: var(--color-bg);
+    padding: 1rem 2rem
+    /* margin-bottom: 1rem; */
+}
+.pricetag{
+    position: absolute;
+    top: 0;
+    background-color: red;
+   height: 1.5rem;
+    width: 4rem;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+@media screen AND (max-width: 1024px) {
+    .container{
+        width: 86%;
+        margin: 0 auto;
+    }
+    .phone{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen AND (max-width: 600px) {
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .phone{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

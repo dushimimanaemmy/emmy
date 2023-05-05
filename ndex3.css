@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+  box-sizing: border-box;
+  user-select: none;
+  text-decoration: none;
+}
+
+:root {
+  --width-lg: 88%;
+  /* --width-md: 84%; */
+  --width-sm: 92%;
+
+  --color-text: black;
+  --color-bg: whitesmoke;
+  --color-btn: green;
+  --color-menu: grey;
+  --color-orange: orange;
+}
+/* .container {
+  width: var(--width-sm);
+  margin: 0 auto;
+} */
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  user-select: none;
+  object-fit: cover;
+}
+nav {
+  background: var(--color-text);
+  height: 73px;
+  border-bottom: solid goldenrod 4px;
+  
+}
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  z-index: 11rem;
+}
+.logo {
+  width: 250px;
+}
+.sideBar {
+  width: 50px;
+  display: none;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+.menu ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+.menu ul li a {
+  color: var(--color-orange);
+  text-decoration: none;
+
+}
+.img img{
+  height: 80vh;
+}
+.combine{
+  position: relative;
+}
+.overlay{
+	position: absolute;
+	bottom: 0;
+	background: linear-gradient(to top, green, rgba(0, 0, 0, 0.1));
+	width: 100%;
+	height: 100%;
+}
+.text{
+	color: white;
+	position: absolute;
+	top: 240px;
+	margin-left: 50px;
+}
+
+@media screen AND (max-width: 1024px) {
+  .sideBar {
+    width: 50px;
+    display: block;
+    cursor: pointer;
+  }
+ #sideNav {
+    position: fixed;
+    width: 300px;
+    height: 30vh;
+    right: -300px;
+    top: 11%;
+    z-index: 3;
+    transition: 0.5s;
+    background-color: black;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  ul li {
+    height: 40px;
+    text-align: center;
+    width: 100%;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    border-top: 1px solid var(--color-bg);
+  }
+  
+}
+
+@media screen AND (max-width: 640px) {
+  .container{
+    width: var(--width-sm);
+    margin: 0 auto;
+  }
+   #sideNav {
+    position: fixed;
+    width: 300px;
+    height: 40vh;
+    right: -300px;
+    top: 14%;
+    z-index: 3;
+    transition: 0.5s;
+    background-color: black;
+  }
+  
+}
+@media screen AND (max-width: 900px) {
+  .container{
+    width: var(--width-sm);
+    margin: 0 auto;
+  }
+   #sideNav {
+    position: fixed;
+    width: 300px;
+    height: 40vh;
+    right: -300px;
+    top: 14%;
+    z-index: 3;
+    transition: 0.5s;
+    background-color: black;
+  }
+  
+}
+@media screen AND (max-width: 320px) {
+  .container{
+    width: var(--width-sm);
+    margin: 0 auto;
+  }
+   #sideNav {
+    position: fixed;
+    width: 300px;
+    height: 62vh;
+    right: -300px;
+    top: 22.5%;
+    z-index: 3;
+    transition: 0.5s;
+    background-color: black;
+  }
+  
+}
+.shapcombine{
+  position: relative;
+}
+/* ==================== Grids Tablet mode ============= */
+@media screen AND (max-width: 1024px){
+
+  .container{
+      width: var(--width-md);
+      margin: 0 auto;
+  }
+
+  .partt{
+      grid-template-columns: repeat(1, 1fr);
+  }
+  .shapcombine{
+    display: block;
+
+   }
+}
+/* ==================== Grids phone mode ============= */
+@media screen AND (min-width: 300px) AND (max-width: 600px){
+
+  .container{
+      width: var(--width-sm);
+      margin: 0 auto;
+  }
+
+  .partt{
+    position: relative;
+      grid-template-columns: repeat(1, 1fr);
+  }
+ .shapcombine{
+  display: block;
+ }
+}
+
+.overlay{
+	position: absolute;
+	top: 0;
+	background: linear-gradient(to top, green, rgba(0, 0, 0, 0.1));
+	width: 100%;
+	height: 100%;
+}  
+

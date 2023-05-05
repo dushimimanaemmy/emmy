@@ -1,0 +1,242 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: lato;
+  user-select: none;
+}
+:root {
+  --color-text: black;
+  --color-bg: white;
+  --color-gray: gray;
+  --color-over1: orange;
+  --color-over2: #88ee29;
+  --color-over3: rgb(241, 129, 157);
+  --color-over4: rgb(172, 117, 245);
+  --color-serc:#eff;
+
+  --width-lg-screen: 90%;
+  --width-md-screen: 86%;
+  --width-sm-screen: 90%;
+}
+.logo{
+  margin-top:14px;
+}
+.menubar{
+  display: flex;
+ justify-content: space-between;
+}
+.menu ul{display: flex;
+  gap: 2rem;
+ list-style-type: none;
+ margin-top:14px;
+}
+
+.menu ul li a{
+text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.container {
+  width: var(--width-lg-screen);
+  margin: 0 auto;
+}
+.category{
+  color: blue;
+}
+/* @keyframes slideInleft{
+
+    from{
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+.category{
+  animation-name:slideInleft ;
+  animation-duration:3s;
+  text-align: center;
+  margin-top: 59px;text-align: center;  
+  transition-duration: auto ;
+  }
+
+.likes {
+  display: flex;
+}
+.likes #likes {
+  width: 10%;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+/* =============================== branding     ======================== */
+.brand {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+
+}
+.rightbrand,
+.leftbrand {
+  height: 250px;
+  position: relative;
+}
+.overlay1 {
+  position: absolute;
+  top: 0;
+  background: linear-gradient(to top, var(--color-over1), rgba(0, 0, 0, 0.1));
+  width: 100%;
+  height: 100%;
+}
+.overlay2 {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to top, var( --color-over2), rgba(0, 0, 0, 0.1));
+    width: 100%;
+    height: 100%;
+  }
+  .overlay3 {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to top, var(--color-over3), rgba(0, 0, 0, 0.1));
+    width: 100%;
+    height: 100%;
+  }
+  .overlay4 {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to top, var( --color-over4), rgba(0, 0, 0, 0.1));
+    width: 100%;
+    height: 100%;
+  }
+.rightdesc {
+  position: absolute;
+  top: 0;
+  color: white;
+  padding: 1rem 2rem;
+}
+.rightdesc span {
+  color: red;
+}
+.rightdesc h3 {
+  font-size: 2rem;
+}
+.rightdesc h2 {
+  font-size: 3rem;
+}
+.rightdesc small {
+  font-size: 1.7rem;
+}
+.rigtdesc p {
+  margin-top: 3rem;
+}
+/* ===================top cat=============== */
+#category {
+  background-color: var(--color-gray);  
+}
+.cardswrapper {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+.cardi {
+  position: relative;
+  height: 300px;
+  z-index: 1;
+}
+.cot {
+  background: var(--color-bg);
+  position: absolute;
+  top: 50%;
+  padding: 0.5rem 1.5rem;
+  width: 200px;
+  left: -2rem;
+  border-bottom: 3px solid var(--color-text);
+  z-index: 1;
+}
+.rotate {
+  width: 50px;
+  height: 50px;
+  background: var(--color-text);
+  transform: rotate(35deg);
+  z-index: -2;
+  position: relative;
+  top: -8.2rem;
+  left: -1.5rem;
+}
+#servc{
+    background-color: var(--color-serc);
+}
+.service{
+    margin-left: 200px;
+    color: blue;
+}
+.paragraph{
+    margin-left: 100px;
+}
+/* =============tablet mode============= */
+@media screen AND (max-width: 1024px) {
+  .container {
+    width: var(--width-lg-screen);
+    margin: 0 auto;
+  }
+  .brand {
+    grid-template-columns: 1fr;
+  }
+  .cardswrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+ 
+}
+/* ================phone mode============= */
+@media screen AND (min-width: 300px) AND (max-width: 600px) {
+  .container {
+    width: var(--width-md-screen);
+    margin: 0 auto;
+  }
+  .brand {
+    grid-template-columns: 1fr;
+  }
+  .cardswrapper {
+    grid-template-columns: 1fr;
+  }
+  #category {
+    height: inherit;
+  }
+}
+
+/* =============================epeating++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* =============tablet mode============= */
+@media screen AND (max-width: 1024px) {
+    .container {
+      width: var(--width-lg-screen);
+      margin: 0 auto;
+    }
+    .containerserce {
+      grid-template-columns: 1fr;
+    }
+    
+   .combine{
+    display: block;
+   }
+  }
+  /* ================phone mode============= */
+  @media screen AND (min-width: 300px) AND (max-width: 600px) {
+    .container {
+      width: var(--width-md-screen);
+      margin: 0 auto;
+    }
+    .containerserce {
+      grid-template-columns: 1fr;
+    }
+    
+    .combine {
+        display: block;
+       }
+  }

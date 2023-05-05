@@ -1,0 +1,39 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: #eff;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.camera{
+    display: flex;
+    gap: 4rem;
+}
+
+/* ==================== Grids Tablet mode ============= */
+@media screen AND (max-width: 1024px){
+
+    .container{
+        width: var(--width-md);
+        margin: 0 auto;
+    }
+  
+    .camera{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  /* ==================== Grids phone mode ============= */
+  @media screen AND (min-width: 300px) AND (max-width: 600px){
+  
+    .container{
+        width: var(--width-sm);
+        margin: 0 auto;
+    }
+  
+    .camera{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
